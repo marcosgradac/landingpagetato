@@ -24,10 +24,15 @@ import Contact from "../../Components/CreatorContact";
 export default function LandingPage() {
   const [openContact, setOpenContact] = useState(false)
   const lanzamientos = [
-    {  img: "./images/ropero.jpeg" },
-    {  img: "./images/cardiometro.jpeg" },
-    {  img: "./images/torontoooo.jfif" },
-    {  img: "./images/torontoooo.jfif" },
+    { img: "./images/ropero.jpeg" },
+    { img: "./images/techo-chapa.jpeg" },
+    { img: "./images/camastro.jpeg" },
+    { img: "./images/tuallas.jpeg" },
+    { img: "./images/aparato-gim.png" },
+    { img: "./images/calefactor.jpeg" },
+    { img: "./images/mueble-tele.jpeg" },
+    { img: "./images/mueble-tele.jpeg" },
+
   ];
 
   const sliderSettings = {
@@ -45,32 +50,49 @@ export default function LandingPage() {
 
   return (
     <Grid className="landing">
-      {/* HERO */}
-      <Grid container className="hero">
-       
-      </Grid>
-
-      {/* SOBRE EL ARTISTA */}
+      <Grid container className="hero" />
       <Container className="about-section">
-        <Stack direction={{ xs: "column", md: "row" }} spacing={5} alignItems="center">
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={6}
+          alignItems="center"
+          className="about-card"
+        >
           <Avatar
-            src="/images/avatar-tomi.jpeg"
+            src="/images/logo-tato.jpeg"
             className="about-avatar"
           />
-          <Grid container>
+
+          <Grid container className="about-content">
             <Typography variant="h4" className="about-title" gutterBottom>
-              Sobre mí
+              Pintura Electroestática de Alta Calidad
             </Typography>
+
+            <Typography className="about-subtitle" gutterBottom>
+              Protección, durabilidad y terminaciones profesionales
+            </Typography>
+
             <Typography className="about-text">
-              Soy Tomas Tissera, artista, cantante y compositor. Empecé a escribir y componer a los 12 años, y desde entonces no paré de buscar mi voz, mi estilo y mi propósito. Hoy, con 23 años, canalizo en mis canciones todo lo que vivo y he vivido.
+              Brindamos servicios profesionales de pintura electrostática en polvo,
+              logrando acabados resistentes, prolijos y de larga duración para todo tipo
+              de piezas metálicas. Nuestro proceso garantiza una terminación superior,
+              ideal para quienes buscan calidad, estética y protección en un solo trabajo.
               <br /><br />
-              Me gusta explorar sonidos, romper etiquetas y conectar desde lo auténtico. Cada tema que saco es un pedazo de mí, con el objetivo de inspirar, motivar y acompañar a quien lo escuche. Porque para mí, la música es una manera de expresar lo que, por timido a veces no puedo decir
+              La pintura electrostática ofrece mayor resistencia a golpes, corrosión y
+              desgaste, además de un acabado uniforme y moderno. Trabajamos con materiales
+              de primera línea y un sistema eficiente que asegura resultados confiables.
+              <br /><br />
+              Atendemos clientes particulares e industriales, adaptándonos a cada proyecto
+              con rapidez, responsabilidad y atención personalizada.
             </Typography>
+
+            <Button href="https://wa.me/543571570590" className="about-cta">
+              Pedí tu presupuesto
+            </Button>
           </Grid>
         </Stack>
       </Container>
 
-      {/* LANZAMIENTOS - CARRUSEL FULL WIDTH */}
       <Grid className="releases">
         <Typography variant="h4" className="releases-title" gutterBottom>
           Trabajos Realizados
@@ -80,7 +102,7 @@ export default function LandingPage() {
             {lanzamientos.map((item, i) => (
               <Grid key={i} className="slider-item">
                 <Card className="release-card">
-                  <CardMedia component="img" height="550px" image={item.img} />
+                  <CardMedia component="img" height="400px" image={item.img} />
                 </Card>
               </Grid>
             ))}
@@ -90,70 +112,41 @@ export default function LandingPage() {
 
       {/* REDES */}
       <Grid className="social">
-        <Typography variant="h5"  gutterBottom>
+        <Typography variant="h5" gutterBottom>
           Contactános
         </Typography>
         <Stack direction="row" spacing={3} justifyContent="center">
-        <Stack direction="row" spacing={3} justifyContent="center">
-  <IconButton
-    component="a"
-    href="https://open.spotify.com/intl-es/artist/75OPQenVE2uY3M2HMLz9Cx?nd=1&dlsi=6a98c5a3ad664a96"
-    target="_blank"
-    className="social-icon"
-  >
-    <img src="/svg/icons8-spotify.svg" alt="Spotify" />
-  </IconButton>
+          <Stack direction="row" spacing={3} justifyContent="center">
+            <IconButton
+              component="a"
+              href="https://www.instagram.com/sclauzero.pintura.en.polvo/"
+              target="_blank"
+              className="social-icon"
+            >
+              <img src="/svg/instagram-icon.svg" alt="Instagram" />
+            </IconButton>
 
-  <IconButton
-    component="a"
-    href="https://www.instagram.com/tomastissera_/"
-    target="_blank"
-    className="social-icon"
-  >
-    <img src="/svg/instagram-icon.svg" alt="Instagram" />
-  </IconButton>
+            <IconButton
+              component="a"
+              href="https://wa.me/543571570590"
+              target="_blank"
+              className="social-icon icon-whatsapp"
+            >
+              <img src="/svg/whatsapp.svg" alt="whatsapp" />
+            </IconButton>
+          </Stack>
 
-  <IconButton
-    component="a"
-    href="https://www.youtube.com/@tomastissera_"
-    target="_blank"
-    className="social-icon icon-youtube"
-  >
-    <img src="/svg/youtube-icon.svg" alt="YouTube" />
-  </IconButton>
-
-  <IconButton
-    component="a"
-    href="https://www.tiktok.com/@tomastissera_?lang=ess"
-    target="_blank"
-    className="social-icon icon-tiktok"
-  >
-    <img src="/svg/tiktok-icon.svg" alt="TikTok" color="" width="45px" />
-  </IconButton>
-</Stack>
-
-</Stack>
+        </Stack>
       </Grid>
 
       {/* FOOTER */}
       <Divider className="footer-divider" />
-     <Grid className="footer" container direction="column" alignItems="center">
-  <Box>
-    © {new Date().getFullYear()} Tomas Tissera. Sitio oficial.
-  </Box>
-  <Box>
-    <Button
-      variant="text"
-      onClick={() => setOpenContact(true)}
-      sx={{ color: "#888", textTransform: "none", fontSize: "0.875rem" }}
-    >
-      Creador de la página web
-    </Button>
-    {openContact == true && <Contact open={openContact} onClose={() => setOpenContact(false)} />}
-  </Box>
-</Grid>
-
-</Grid>
+      <Grid className="footer" container direction="column" alignItems="center">
+        <Box>
+          © {new Date().getFullYear()} Tomas Tissera. Sitio oficial.
+        </Box>
+      </Grid>
+    </Grid>
 
   );
 }
