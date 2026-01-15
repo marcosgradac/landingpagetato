@@ -24,14 +24,15 @@ import Contact from "../../Components/CreatorContact";
 export default function LandingPage() {
   const [openContact, setOpenContact] = useState(false)
   const lanzamientos = [
-    { img: "./images/ropero.jpeg" },
     { img: "./images/techo-chapa.jpeg" },
     { img: "./images/camastro.jpeg" },
     { img: "./images/tuallas.jpeg" },
     { img: "./images/aparato-gim.png" },
     { img: "./images/calefactor.jpeg" },
-    { img: "./images/mueble-tele.jpeg" },
-    { img: "./images/mueble-tele.jpeg" },
+    { img: "./images/silla.jpeg" },
+    { img: "./images/mesa.jpeg" },
+    { img: "./images/rio3.jpeg" },
+    { img: "./images/rio32.jpeg" },
 
   ];
 
@@ -134,6 +135,14 @@ export default function LandingPage() {
             >
               <img src="/svg/whatsapp.svg" alt="whatsapp" />
             </IconButton>
+            <IconButton
+              component="a"
+              href="https://wa.me/543571570590"
+              target="_blank"
+              className="social-icon icon-tiktok"
+            >
+              <img src="/svg/tiktok-icon.svg" alt="whatsapp" />
+            </IconButton>
           </Stack>
 
         </Stack>
@@ -143,7 +152,7 @@ export default function LandingPage() {
       <Divider className="footer-divider" />
       <Grid className="footer" container direction="column" alignItems="center">
         <Box>
-          © {new Date().getFullYear()} Tomas Tissera. Sitio oficial.
+          © {new Date().getFullYear()} Sclauzero, pintura en polvo. Sitio oficial.
         </Box>
       </Grid>
     </Grid>
