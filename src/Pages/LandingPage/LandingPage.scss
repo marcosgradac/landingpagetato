@@ -212,3 +212,192 @@
     transform: translateY(0);
   }
 }
+.location {
+  background-color: #111;
+  padding: 5rem 1rem;
+
+  .location-title {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 3rem;
+  }
+
+  .map-container {
+    height: 100%;
+    min-height: 350px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .location-card {
+    height: 100%;
+    min-height: 350px;
+    border-radius: 1.5rem;
+    background: linear-gradient(
+      135deg,
+      rgba(41, 165, 196, 0.15),
+      rgba(0, 0, 0, 0.85)
+    );
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    color: white;
+  }
+
+  .location-card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location-card-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .location-subtitle {
+    font-weight: 600;
+  }
+
+  .location-text {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .location-cta {
+    margin-top: 2rem;
+    align-self: flex-start;
+    background: linear-gradient(135deg, #29a5c4, #1db954);
+    color: #111;
+    font-weight: bold;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(41, 165, 196, 0.5);
+    }
+  }
+}
+
+/* ===========================
+   📱 RESPONSIVE – MOBILE
+   =========================== */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero {
+    height: 70vh;
+    background-position: center;
+  }
+
+  /* ABOUT */
+  .about-section {
+    padding: 3rem 1rem;
+
+    .about-card {
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+
+    .about-avatar {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-title {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    .about-subtitle {
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .about-cta {
+      align-self: center;
+    }
+  }
+
+  /* SLIDER */
+  .releases {
+    padding: 3rem 0.5rem;
+
+    .slider-item {
+      padding: 0.5rem;
+    }
+
+    .release-card img {
+      height: 280px;
+    }
+  }
+
+  /* LOCATION */
+  .location {
+    padding: 3rem 1rem;
+
+    .location-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .map-container,
+    .location-card {
+      min-height: 280px;
+    }
+
+    .location-card {
+      margin-top: 1rem;
+    }
+
+    .location-card-content {
+      padding: 1.5rem;
+    }
+
+    .location-text {
+      font-size: 0.95rem;
+    }
+
+    .location-cta {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+
+  /* SOCIAL */
+  .social {
+    margin-top: 3rem;
+
+    .social-icon img {
+      width: 36px;
+    }
+
+    .icon-whatsapp img {
+      width: 60px !important;
+    }
+
+    .icon-tiktok img {
+      width: 42px;
+    }
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
