@@ -5,26 +5,13 @@
 }
 
 .hero {
+  width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-
-  background-image: url("../../../assets/images/portada.png");
-
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  /* 🔑 clave */
-  background-position: center 30%;
-
-  text-align: center;
-  padding: 0 1rem;
-
-  .hero-content {
-    animation: fadeInUp 1s ease-out;
-  }
-
+  position: relative; // importante para posicionar el logo
+  background: url('../../../assets/images/portada.png') no-repeat center center;
 }
+
+
 
 .about-section {
   padding: 5rem 1rem;
