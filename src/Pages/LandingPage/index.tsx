@@ -1,10 +1,8 @@
-import DesktopLanding from "./desktop";
-import MobileLanding from "./mobile";
+import { useMediaQuery } from "@mui/material";
+import LandingDesktop from "./desktop/index";
+import LandingMobile from "./mobile/LandingMobile";
 
-const LandingPage = () => {
-  const isMobile = window.innerWidth <= 768;
-
-  return isMobile ? <MobileLanding /> : <DesktopLanding />;
-};
-
-export default LandingPage;
+export default function LandingPage() {
+  const isMobile = useMediaQuery("(max-width:768px)");
+  return isMobile ? <LandingMobile /> : <LandingDesktop />;
+}

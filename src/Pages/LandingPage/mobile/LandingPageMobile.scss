@@ -1,0 +1,239 @@
+.mobile-landing {
+  background: #0e0e0e;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('../../../assets/images/portada.png') center / cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.95)
+  );
+  z-index: 1;
+}
+
+/* CENTRO */
+.hero-center {
+  z-index: 2;
+  padding: 0 1.5rem;
+}
+
+.hero-logo {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1.8rem;
+  border: 4px solid #29a5c4;
+  box-shadow: 0 0 35px rgba(41,165,196,.7);
+  background: white;
+
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: .6rem;
+}
+
+.hero-subtitle {
+  color: #29a5c4;
+  font-size: 1.1rem;
+}
+
+/* ABAJO */
+.hero-bottom {
+  z-index: 2;
+  padding: 2rem 1.5rem 2.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+/* CTA */
+.hero-cta {
+  background: linear-gradient(135deg, #29a5c4, #1db954);
+  color: #111;
+  font-weight: 700;
+  border-radius: 2.5rem;
+  padding: .9rem 2.8rem;
+}
+
+/* CONTACTOS */
+.hero-contacts {
+  display: flex;
+  gap: 1.2rem;
+
+  button {
+    background: rgba(0,0,0,.55);
+    backdrop-filter: blur(6px);
+    color: #29a5c4;
+  }
+}
+
+/* =========================
+   🧱 INTRO CARD – MOBILE
+   ========================= */
+
+.intro-card-wrapper {
+  padding: 4rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #0e0e0e,
+    #141414
+  );
+}
+
+.intro-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 2.8rem 2.2rem;
+  border-radius: 2.2rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,.04),
+    rgba(0,0,0,.75)
+  );
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.8),
+    inset 0 0 0 1px rgba(255,255,255,.05);
+
+  animation: introFadeUp .8s ease-out;
+}
+
+/* TÍTULO */
+.intro-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
+  text-align: center;
+  letter-spacing: .3px;
+}
+
+/* TEXTO */
+.intro-text {
+  color: #cfcfcf;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+/* detalle visual */
+.intro-card::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0 auto 1.8rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #29a5c4, #1db954);
+  opacity: .85;
+}
+
+/* ANIMACIÓN */
+@keyframes introFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* CARRUSEL */
+.auto-carousel {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: hidden;
+  padding: 2.5rem 1.5rem;
+}
+
+.carousel-item {
+  flex: 0 0 70%;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+/* FULLSCREEN */
+.fullscreen-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.95);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-image {
+  max-width: 95%;
+  max-height: 90%;
+  border-radius: 16px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.2);
+  color: white;
+}
+
+/* SOCIAL */
+  .social-mobile {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    .icon-social-mobile img {
+      width: 36px;
+    }
+
+    .icon-whatsapp-mobile img {
+      width: 80px;
+    }
+
+    .icon-tiktok-mobile img {
+      width: 55px;
+    }
+  }
+
+/* FOOTER */
+.footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: .85rem;
+  color: #aaa;
+}
