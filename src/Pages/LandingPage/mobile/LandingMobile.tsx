@@ -7,6 +7,7 @@ import {
   IconButton,
   Grid,
   Stack,
+  Divider,
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -133,7 +134,53 @@ export default function LandingMobile() {
         </Box>
       )}
 
-      {/* CTA FINAL */}
+<Box className="mobile-location-section">
+  <Typography variant="h5" className="mobile-location-title">
+    Dónde estamos
+  </Typography>
+
+  {/* MAPA */}
+  <Box className="mobile-map-wrapper">
+    <iframe
+      src="https://www.google.com/maps?q=Independencia%20145%20Río%20Tercero%20Córdoba&output=embed"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    />
+  </Box>
+
+  <Box className="mobile-location-card premium">
+  <Typography className="location-title">
+    Sclauzero
+  </Typography>
+
+  <Typography className="location-subtitle">
+    Pintura en polvo
+  </Typography>
+
+  <Typography className="location-address">
+    Independencia 145 · Río Tercero
+  </Typography>
+
+  <Divider className="location-divider" />
+
+  <Box className="location-hours">
+    <Typography className="hours-label">Horarios</Typography>
+    <Typography className="hours-text">
+      Lun a Vie · 08 a 12 am - 15 a 19pm
+    </Typography>
+  </Box>
+
+  <Button
+    href="https://www.google.com/maps/dir/?api=1&destination=Independencia+145+Río+Tercero+Córdoba"
+    target="_blank"
+    className="location-button-premium"
+  >
+    Cómo llegar
+  </Button>
+</Box>
+
+</Box>
+
     {/* REDES */}
       <Grid className="social-mobile">
         <Typography variant="h5" gutterBottom>

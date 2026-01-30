@@ -160,6 +160,35 @@
     transform: translateY(0);
   }
 }
+.intro-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* BORDE LUMINOSO (MISMO QUE MOBILE LOCATION CARD) */
+.intro-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(0,255,200,.25),
+    transparent 40%,
+    transparent 60%,
+    rgba(0,255,200,.25)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
 
 
 
@@ -236,4 +265,156 @@
   text-align: center;
   font-size: .85rem;
   color: #aaa;
+}
+/* =========================
+   📍 DÓNDE ESTAMOS - MOBILE
+   ========================= */
+
+.mobile-location-section {
+  padding: 3rem 1.2rem 4rem;
+  background: radial-gradient(circle at top, #111, #000);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.mobile-location-title {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+/* MAPA */
+.mobile-map-wrapper {
+  width: 100%;
+  height: 280px;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,.45);
+}
+
+.mobile-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* =========================
+   📍 CARD PREMIUM MOBILE
+   ========================= */
+
+.mobile-location-card.premium {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  border-radius: 1.8rem;
+  padding: 2rem 1.7rem 2.2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.55),
+    inset 0 0 0 1px rgba(255,255,255,.05);
+}
+
+/* Borde luminoso sutil */
+.mobile-location-card.premium::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    120deg,
+    rgba(0,255,200,.25),
+    transparent 40%,
+    transparent 60%,
+    rgba(0,255,200,.25)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* TEXTOS */
+.location-title {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: .6px;
+}
+
+.location-subtitle {
+  color: #9ff5d6;
+  font-weight: 600;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location-address {
+  color: #cfcfcf;
+  font-size: .9rem;
+}
+
+/* DIVIDER */
+.location-divider {
+  background: rgba(255,255,255,.08);
+  margin: .8rem 0;
+}
+
+/* HORARIOS */
+.location-hours {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.hours-label {
+  color: #9ff5d6;
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.hours-text {
+  color: #e5e5e5;
+  font-size: .9rem;
+}
+
+/* =========================
+   🚀 BOTÓN PREMIUM
+   ========================= */
+
+.location-button-premium {
+  margin-top: 1.4rem;
+  background: linear-gradient(135deg, #1ee3b3, #16c79a);
+  color: #00110c;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 1.2rem 0;
+  text-transform: none;
+  letter-spacing: .4px;
+
+  box-shadow:
+    0 12px 30px rgba(22,199,154,.45);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.location-button-premium:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 45px rgba(22,199,154,.6);
+}
+
+.location-button-premium:active {
+  transform: scale(.96);
 }
