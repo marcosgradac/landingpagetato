@@ -11,9 +11,6 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import PhoneIcon from "@mui/icons-material/Phone";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function LandingMobile() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -53,27 +50,21 @@ export default function LandingMobile() {
     <Box className="mobile-landing">
 
       {/* HERO */}
-      <Box className="hero">
-        <Box className="hero-overlay" />
+      <Box className="hero-mobile">
+        <Box className="hero-overlay-mobile" />
 
         {/* CONTENIDO CENTRAL */}
-        <Box className="hero-center">
+        <Box className="hero-center-mobile">
           <Avatar
             src="/images/logo-tato.jpeg"
-            className="hero-logo"
+            className="hero-logo-mobile"
           />
 
-          <Typography className="hero-title">
-            Pintura electrostática profesional
-          </Typography>
-
-          <Typography className="hero-subtitle">
-            Terminaciones metálicas de alta resistencia
-          </Typography>
+         
         </Box>
 
         {/* CTA ABAJO */}
-        <Box className="hero-bottom">
+        <Box className="hero-bottom-mobile">
           <Button
             href="https://wa.me/543571570590"
             className="hero-cta"
@@ -86,25 +77,21 @@ export default function LandingMobile() {
       {/* TEXTO */}
      <Box className="intro-card-wrapper">
   <Box className="intro-card">
-    <Typography className="intro-title">
-      Nuestro trabajo
-    </Typography>
+  <Typography className="intro-text">
+    Nos especializamos en pintura electrostática en polvo para piezas metálicas,
+    cuidando cada etapa del proceso y prestando atención a los detalles.
+  </Typography>
 
-    <Typography className="intro-text">
-      Nos dedicamos a la pintura electrostática en polvo de piezas metálicas,
-      cuidando cada paso del proceso y prestando atención a los detalles.
-    </Typography>
+  <Typography className="intro-text">
+    Buscamos terminaciones prolijas, duraderas y uniformes,
+    trabajando con materiales de calidad y procedimientos confiables.
+  </Typography>
 
-    <Typography className="intro-text">
-      Apuntamos a lograr terminaciones prolijas, duraderas y parejas,
-      utilizando materiales de buena calidad y un método de trabajo responsable.
-    </Typography>
-
-    <Typography className="intro-text">
-      Realizamos trabajos para particulares e industrias, adaptándonos
-      a cada necesidad con compromiso y seriedad.
-    </Typography>
-  </Box>
+  <Typography className="intro-text">
+    Realizamos trabajos tanto para particulares como para industrias,
+    adaptándonos a cada proyecto con responsabilidad y compromiso.
+  </Typography>
+</Box>
 </Box>
 
       {/* CARRUSEL */}
@@ -217,7 +204,6 @@ export default function LandingMobile() {
 
         </Stack>
       </Grid>
-
       <Box className="footer">
         © {new Date().getFullYear()} Sclauzero – Sitio oficial
       </Box>

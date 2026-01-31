@@ -53,7 +53,12 @@ export default function LandingDesktop() {
 
   return (
     <Grid className="landing">
-      <Grid container className="hero" />
+     <Box className="hero">
+  <Avatar 
+    src="/images/logo-tato.jpeg"
+    className="hero-avatar"
+  />
+</Box>
       <Container className="about-section">
         <Stack
           direction={{ xs: "column", md: "row" }}
@@ -61,11 +66,7 @@ export default function LandingDesktop() {
           alignItems="center"
           className="about-card"
         >
-          <Avatar
-            src="/images/logo-tato.jpeg"
-            className="about-avatar"
-          />
-
+         
           <Grid container className="about-content">
             <Typography variant="h4" className="about-title" gutterBottom>
               Pintura Electroestática de Alta Calidad
