@@ -50,29 +50,16 @@ export default function LandingMobile() {
     <Box className="mobile-landing">
 
       {/* HERO */}
-      <Box className="hero-mobile">
-        <Box className="hero-overlay-mobile" />
+<Box className="hero-mobile">
+  {/* overlay sutil */}
+  <Box className="hero-overlay-mobile" />
 
-        {/* CONTENIDO CENTRAL */}
-        <Box className="hero-center-mobile">
-          <Avatar
-            src="/images/logo-tato.jpeg"
-            className="hero-logo-mobile"
-          />
-
-         
-        </Box>
-
-        {/* CTA ABAJO */}
-        <Box className="hero-bottom-mobile">
-          <Button
-            href="https://wa.me/543571570590"
-            className="hero-cta"
-          >
-            Presupuesto por WhatsApp
-          </Button>
-        </Box>
-      </Box>
+  {/* logo flotante */}
+  <Avatar
+    src="/images/logo-tato.jpeg"
+    className="hero-avatar-mobile"
+  />
+</Box>
 
       {/* TEXTO */}
      <Box className="intro-card-wrapper">

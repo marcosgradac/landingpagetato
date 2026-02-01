@@ -4,72 +4,62 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* HERO */
+/* =========================
+   HERO MOBILE
+========================= */
+
 .hero-mobile {
-  height: 100vh;
-  background: url('../../../assets/images/portada.png') center / cover no-repeat;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+
+  background: url('../../../assets/images/portada.jpeg') center / cover no-repeat;
+
+  overflow: hidden;
 }
 
+/* overlay oscuro sutil */
 .hero-overlay-mobile {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.95)
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.55)
   );
   z-index: 1;
 }
 
-/* CENTRO */
-.hero-center-mobile {
+/* avatar flotante */
+.hero-avatar-mobile {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+  width: 110px;
+  height: 110px;
+
+  border-radius: 50%;
+  border: 3px solid #29a5c4;
+  box-shadow: 0 0 18px rgba(41,165,196,.6);
+
+  animation: heroFloatingMobile 5s ease-in-out infinite;
+  transition: transform .3s ease;
+
   z-index: 2;
-  padding: 0 1.5rem;
 }
 
-.hero-logo-mobile {
-  width: 300px;
-  height: 300px;
-  margin: 0 auto 1.8rem;
-  border: 4px solid #29a5c4;
-  box-shadow: 0 0 35px rgba(41,165,196,.7);
-  background: white;
-
+.hero-avatar-mobile:hover {
+  transform: scale(1.05);
 }
 
-.hero-title-mobile {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: .6rem;
+/* animación flotante */
+@keyframes heroFloatingMobile {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
-.hero-subtitle-mobile {
-  color: #29a5c4;
-  font-size: 1.1rem;
-}
-
-/* ABAJO */
-.hero-bottom-mobile {
-  z-index: 2;
-  padding: 2rem 1.5rem 2.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
-}
-
-/* CTA */
-.hero-cta {
-  background: linear-gradient(135deg, #29a5c4, #1db954);
-  color: #111;
-  font-weight: 700;
-  border-radius: 2.5rem;
-  padding: .9rem 2.8rem;
-}
 
 /* CONTACTOS */
 .hero-contacts {
@@ -88,7 +78,7 @@
    ========================= */
 
 .intro-card-wrapper {
-  padding: 4rem 1.5rem;
+ padding: 4rem 1.5rem;
   display: flex;
   justify-content: center;
   background: linear-gradient(
