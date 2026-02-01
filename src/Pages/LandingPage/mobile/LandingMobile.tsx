@@ -59,6 +59,15 @@ export default function LandingMobile() {
     src="/images/logo-tato.jpeg"
     className="hero-avatar-mobile"
   />
+  <Box className="hero-cta-mobile">
+  <Button
+    href="https://wa.me/543571570590?text=Hola%20quiero%20pedir%20un%20presupuesto"
+    target="_blank"
+    className="hero-button-mobile"
+  >
+    Pedí tu presupuesto
+  </Button>
+</Box>
 </Box>
 
       {/* TEXTO */}
