@@ -203,6 +203,14 @@ export default function LandingMobile() {
       <Box className="footer">
         © {new Date().getFullYear()} Sclauzero – Sitio oficial
       </Box>
+      <a
+  href="https://wa.me/543571570590?text=Hola%20quiero%20hacer%20una%20consulta"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="whatsapp-float"
+>
+  <img src="/svg/whatsapp.svg" alt="WhatsApp" />
+</a>
     </Box>
   );
 }
