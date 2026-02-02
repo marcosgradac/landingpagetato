@@ -3,6 +3,12 @@
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
 }
+  .releases-title-mobile {
+    padding-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
 
 /* =========================
    HERO MOBILE
@@ -131,10 +137,10 @@
 }
 
 /* TÍTULO */
-.intro-title {
+.intro-title-mobile {
   font-weight: 700;
   font-size: 1.4rem;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem !important;
   text-align: center;
   letter-spacing: .3px;
 }
